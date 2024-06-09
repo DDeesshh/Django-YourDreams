@@ -1,0 +1,231 @@
+/* ------------------модальные окна------------------ */
+
+/* само модальное окно */
+dialog {
+    border: none;
+    padding: 0;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+dialog::backdrop {
+    background-color: rgba(119, 128, 175, 0.672);
+    backdrop-filter: blur(10px);
+}
+
+/* закругление верхней, нижней части модального окна */
+.white {
+    background-color: white;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.white-2 {
+    background-color: white;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+/* контейнер */
+.container-2 {
+    width: 947px;
+    margin: 0 auto;
+}
+
+/* форма (карточка) */
+.modal-second-block-form-card {
+    width: 947px;
+    /* height: 476px; */
+    border: none;
+    /* box-shadow: 16px 8px 25px 1px #001AFF; */
+    background-image: linear-gradient(90deg, rgba(3, 4, 37, 1) 0%, rgba(20, 22, 96, 1) 43%, rgba(19, 25, 215, 1) 100%);
+    z-index: 1;
+}
+
+/* форма-подсветка  формы (карточки) */
+.modal-second-block-form-border {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(20, 22, 96, 1) 35%, rgba(50, 58, 255, 1) 100%);
+    border: none;
+}
+
+/* инпут */
+.modal-second-block-form-input {
+    width: 430px;
+    height: 60px;
+    border-radius: 100px;
+    border: none;
+    box-shadow: 16px 8px 25px 1px #001AFF;
+    background-image: linear-gradient(90deg, rgba(3, 4, 37, 1) 0%, rgba(20, 22, 96, 1) 43%, rgba(19, 25, 215, 1) 100%);
+    z-index: 1;
+    color: white;
+    padding-left: 30px;
+    font-family: "Montserrat", sans-serif;
+    outline: none;
+}
+
+/* инпут (подсветка) */
+.modal-second-block-form-input-border {
+    width: 433px;
+    height: 63px;
+    position: absolute;
+    padding: 0px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    border-radius: 100px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(20, 22, 96, 1) 35%, rgba(50, 58, 255, 1) 100%);
+    border: none;
+}
+
+/* кнопка */
+.button-modal,
+.button-modal-2,
+.button-modal-3,
+.button-modal-4,
+.button-modal-5 {
+    width: 377px;
+    height: 63px;
+    text-decoration: none;
+    border-radius: 100px;
+    border: none;
+    box-shadow: 16px 8px 25px 1px #001AFF;
+    transition: 500ms;
+    background-image: linear-gradient(90deg, rgba(3, 4, 37, 1) 0%, rgba(20, 22, 96, 1) 43%, rgba(19, 25, 215, 1) 100%);
+    transition: 500ms;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.button-modal::after,
+.button-modal-2::after,
+.button-modal-3::after,
+.button-modal-4::after,
+.button-modal-5::after {
+    width: 374px;
+    height: 58px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: 'Создать аккаунт';
+    font-size: 20px;
+    color: #eee;
+    border-radius: 100px;
+    background-color: rgb(3, 4, 37);
+    transition: 500ms;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+.button-modal:hover::after,
+.button-modal-2:hover::after,
+.button-modal-3:hover::after,
+.button-modal-4:hover::after,
+.button-modal-5:hover::after {
+    font-size: 20px;
+    background-color: transparent;
+}
+
+.button-modal:focus,
+.button-modal-2:focus,
+.button-modal-3:focus,
+.button-modal-4:focus,
+.button-modal-5:focus {
+    outline: none;
+}
+
+.button-modal:active,
+.button-modal-2:active,
+.button-modal-3:active,
+.button-modal-4:active,
+.button-modal-5:active {
+    transform: translateY(10px);
+}
+
+/* название второй кнопки */
+.button-modal-2::after {
+    content: 'Авторизоваться';
+}
+
+/* название третьей кнопки */
+.button-modal-3::after {
+    content: 'Продолжить';
+}
+
+/* название четвертой кнопки */
+.button-modal-4::after {
+    content: 'Сохранить';
+}
+
+/* название пятой кнопки */
+.button-modal-5::after {
+    content: 'Оформить заказ';
+}
+
+/* карточка для поздравления */
+.modal-content-form-border {
+    width: 641px;
+    height: 120px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(20, 22, 96, 1) 35%, rgba(50, 58, 255, 1) 100%);
+    border: none;
+}
+
+.modal-content-block-form-card {
+    width: 649px;
+    height: 122px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 16px 8px 25px 1px #001AFF;
+    background-image: linear-gradient(90deg, rgba(3, 4, 37, 1) 0%, rgba(20, 22, 96, 1) 43%, rgba(19, 25, 215, 1) 100%);
+    z-index: 1;
+}
+
+/* круг */
+.modal-second-block-card-content-round {
+    width: 125px;
+    height: 125px;
+    border-radius: 100px;
+    border: none;
+    box-shadow: 16px 8px 25px 1px #001AFF;
+    background-image: linear-gradient(90deg, rgba(3, 4, 37, 1) 0%, rgba(20, 22, 96, 1) 43%, rgba(19, 25, 215, 1) 100%);
+    z-index: 1;
+}
+
+/* круг-подсветка */
+.modal-second-block-card-content-border {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(20, 22, 96, 1) 35%, rgba(50, 58, 255, 1) 100%);
+    border: none;
+
+    background-image: conic-gradient(transparent, rgb(124, 137, 255), transparent 50%);
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(1turn);
+    }
+}

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:wght@100..900&display=swap');
+
+
+h5{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+a{
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+h1{
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+}
+
+h2{
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+}
+
+h3{
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+h4{
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+}
+
+
+p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+}

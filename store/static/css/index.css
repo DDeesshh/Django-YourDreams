@@ -1,0 +1,197 @@
+/* ------------------преимущества, скидка, отзывы, футер------------------ */
+
+#fourth-block,
+#sixth-block,
+#eighth-block,
+#ninth-block {
+    background-color: #060845;
+}
+
+/* круг */
+.fourth-block-card-content-round {
+    width: 97px;
+    height: 97px;
+    border-radius: 100px;
+    border: none;
+    box-shadow: 16px 8px 25px 1px #001AFF;
+    background-image: linear-gradient(90deg, rgba(3, 4, 37, 1) 0%, rgba(20, 22, 96, 1) 43%, rgba(19, 25, 215, 1) 100%);
+    z-index: 1;
+}
+
+/* круг-подсветка */
+.fourth-block-card-content-border {
+    width: 100px;
+    height: 101px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(20, 22, 96, 1) 35%, rgba(50, 58, 255, 1) 100%);
+    border: none;
+
+    background-image: conic-gradient(transparent, rgb(124, 137, 255), transparent 50%);
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+/* форма карточки */
+.card {
+    width: 465px;
+    height: 275px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 16px 8px 25px 1px #001AFF;
+    background-image: linear-gradient(90deg, rgba(3, 4, 37, 1) 0%, rgba(20, 22, 96, 1) 43%, rgba(19, 25, 215, 1) 100%);
+}
+
+/* форма-подсветка карточки */
+.fourth-block-card-border {
+    width: 470px;
+    height: 280px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(20, 22, 96, 1) 35%, rgba(50, 58, 255, 1) 100%);
+    border: none;
+}
+
+
+/* ------------------о компании------------------ */
+
+.fifth-block-content-text {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column
+}
+
+
+/* ------------------информация о компании------------------ */
+
+/* маленькие круги */
+.seventh-block-button-round,
+.seventh-block-button-round-big {
+    width: 330px;
+    height: 330px;
+    border-radius: 100%;
+    border: none;
+    box-shadow: 16px 8px 25px 1px #001AFF;
+    background-image: linear-gradient(90deg, rgba(3, 4, 37, 1) 0%, rgba(20, 22, 96, 1) 43%, rgba(19, 25, 215, 1) 100%);
+    z-index: 1;
+
+
+    -webkit-animation: glowing 1500ms infinite;
+    -moz-animation: glowing 1500ms infinite;
+    -o-animation: glowing 1500ms infinite;
+    animation: glowing 1500ms infinite;
+}
+
+/* подсветка маленьких кругов */
+.seventh-block-button-border {
+    width: 333px;
+    height: 333px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(20, 22, 96, 1) 35%, rgba(50, 58, 255, 1) 100%);
+    border: none;
+
+}
+
+/* большой круг */
+.seventh-block-button-round-big {
+    width: 458px;
+    height: 458px;
+}
+
+/* подсветка большого круга */
+.seventh-block-button-border-big {
+
+    width: 462px;
+    height: 462px;
+    border-radius: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(20, 22, 96, 1) 35%, rgba(50, 58, 255, 1) 100%);
+    border: none;
+
+}
+
+@keyframes glowing {
+    0% {
+        background-color: #001AFF;
+        -webkit-box-shadow: 0 0 3px #001AFF;
+    }
+
+    50% {
+        background-color: #001AFF;
+        -webkit-box-shadow: 0 0 50px #001AFF;
+    }
+
+    100% {
+        background-color: #001AFF;
+        -webkit-box-shadow: 0 0 3px #001AFF;
+    }
+}
+
+/* расположени текста на кругах */
+.seventh-block-button-round-card-content,
+.seventh-block-button-round-big-card-conten {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+/* расположени текста на большом круге */
+.seventh-block-button-round-big-card-content {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ------------------отзывы------------------ */
+
+/* круг */
+.eighth-block-card-content-round {
+    width: 125px;
+    height: 125px;
+    border-radius: 100px;
+    border: none;
+    box-shadow: 16px 8px 25px 1px #001AFF;
+    background-image: linear-gradient(90deg, rgba(3, 4, 37, 1) 0%, rgba(20, 22, 96, 1) 43%, rgba(19, 25, 215, 1) 100%);
+    z-index: 1;
+}
+
+/* круг-подсветка */
+.eighth-block-card-content-border {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(20, 22, 96, 1) 35%, rgba(50, 58, 255, 1) 100%);
+    border: none;
+
+    background-image: conic-gradient(transparent, rgb(124, 137, 255), transparent 50%);
+    animation: rotate 3s linear infinite;
+}
+
+
+/* ------------------футер------------------ */

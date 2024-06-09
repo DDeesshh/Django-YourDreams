@@ -1,0 +1,1357 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="icon" href="{% static 'img/icon.svg' %}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/modal.css' %}">
+
+    <script src="{% static 'script/script.js' %}"></script>
+    <script src="{% static 'script/modal.js' %}"></script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <!--------------------скидка----------------------->
+        <section id="first-block">
+
+            <div class="first-block-sales">
+
+                <h5 class="text-center text-white pt-2 pb-2">Закажите наши сны в течение <cite
+                        id="countdown">00:00:00</cite>
+                    часов и получите скидку 10%<img src="{% static 'img/sales.svg' %}"></h5>
+
+            </div>
+
+        </section>
+
+        <!--------------------шапка----------------------->
+        <section id="second-block">
+
+            <nav class="navbar">
+
+                <div class="container mb-3">
+
+                    <nav class="navbar navbar-expand-lg">
+
+                        <div class="nav-buttons-1 container-fluid">
+
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-buttons-1-main navbar-brand fs-3" href="#"><button
+                                                class="nav-buttons-1-main">Главная</button></a>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class=" navbar-brand fs-3" href="{% url 'products:index' %}"
+                                            id="products.html"><button
+                                                class="nav-buttons-1-catalog">Каталог</button></a>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                    </nav>
+
+                    <a class="navbar-brand " href="#">
+                        <img src="{% static 'img/logo(1).svg' %}" alt="Bootstrap">
+                    </a>
+
+                    <nav class="navbar navbar-expand-lg">
+
+                        <div class="nav-buttons-2 container-fluid">
+
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="navbar-brand " href="#"><button class="nav-buttons-2-basket"><img
+                                                    src="{% static 'img/basket.svg' %}"
+                                                    onclick="window.personalBasket.showModal()"></button></a>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                                    <li class="nav-item">
+                                        <a class="navbar-brand " href="#"><button class="nav-buttons-2-client"><img
+                                                    src="{% static 'img/client.svg' %}"
+                                                    onclick="window.authorization.showModal()"></button></a>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <!--------------------модальное окно "авторизация"----------------------->
+                            <dialog id="authorization">
+
+                                <section id="modal-first-block">
+
+                                    <div class="white container-2">
+
+                                        <div class="content pt-4 pb-4">
+
+                                            <nav class="navbar row">
+
+                                                <p class="col-lg-4"></p>
+                                                <h3 class="col-lg-4 text-center">Войти в аккаунт</h3>
+
+                                                <nav class="col-lg-4 navbar navbar-expand-lg ">
+
+                                                    <div class="nav-buttons-2-2 position-absolute end-0 pe-2">
+
+                                                        <button class="navbar-toggler" type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#navbarSupportedContent"
+                                                            aria-controls="navbarSupportedContent" aria-expanded="false"
+                                                            aria-label="Toggle navigation">
+                                                            <span class="navbar-toggler-icon"></span>
+                                                        </button>
+
+                                                        <div class="collapse navbar-collapse"
+                                                            id="navbarSupportedContent d-flex">
+                                                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                                                                <li class="nav-item">
+                                                                    <a class="navbar-brand " href="#"><button
+                                                                            class="nav-buttons-2-client"><img
+                                                                                src="{% static 'img/cross.svg' %}"
+                                                                                onclick="window.authorization.close()"></button></a>
+                                                                </li>
+                                                            </ul>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </nav>
+
+                                            </nav>
+
+                                        </div>
+
+                                    </div>
+
+                                </section>
+
+                                <section id="modal-second-block">
+
+                                    <div class="container-2">
+
+                                        <div class="content ">
+
+                                            <div class="content-up d-flex justify-content-between">
+
+                                                <div
+                                                    class="content-form d-flex align-items-center flex-direction-column">
+
+                                                    <div class="modal-second-block-form-border ms-3"></div>
+                                                    <div class="modal-second-block-form-card text-white flex-left"
+                                                        style="height: 320px;">
+
+                                                        <form class="row col gy-5 m-0 justify-content-evenly">
+
+                                                            <!-- <div class="second-block-form-input-border"></div> -->
+
+                                                            <input name="name_root" type="resname"
+                                                                placeholder="Введите имя пользователя" required
+                                                                class="modal-second-block-form-input ">
+                                                            <input name="password" type="password"
+                                                                placeholder="Введите пароль" required
+                                                                class="modal-second-block-form-input col-lg-6">
+
+
+                                                        </form>
+
+                                                        <div class="form-button d-flex justify-content-center mt-4">
+
+                                                            <button class="button-modal-2 noselect flex-center"
+                                                                onclick="window.personalAccount.showModal()"></button>
+
+                                                        </div>
+
+                                                        <div
+                                                            class="content-messengers mt-4 d-flex justify-content-center">
+
+                                                            <a href="https://t.me/malepeg"><img
+                                                                    src="{% static 'img/telegram.svg' %}"
+                                                                    class="messengers"></a>
+                                                            <a href="https://t.me/malepeg"><img
+                                                                    src="{% static 'img/vkontakte.svg' %}"
+                                                                    class="messengers"></a>
+                                                            <a href="https://t.me/malepeg"><img
+                                                                    src="{% static 'img/youtube.svg' %}"
+                                                                    class="messengers"></a>
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </section>
+
+                                <section id="modal-third-block">
+
+                                    <div class="white-2 container-2">
+
+                                        <div class="content pt-3 pb-2 ">
+
+                                            <h5 class="text-center">Нет аккаунта?
+
+                                                <button class="nav-buttons-1-main" onclick="modalAR()">
+                                                    <h5>Зарегистрироваться<img src="{% static 'img/sales.svg' %}"></h5>
+                                                </button>
+
+                                        </div>
+
+                                    </div>
+
+                                </section>
+
+                            </dialog>
+
+                            <!--------------------модальное окно "регистрация"----------------------->
+                            <dialog id="registration">
+
+                                <section id="modal-first-block">
+
+                                    <div class="white container-2">
+
+                                        <div class="content pt-4 pb-4">
+
+                                            <nav class="navbar row">
+
+                                                <p class="col-lg-4"></p>
+                                                <h3 class="col-lg-4 text-center">Создать аккаунт</h3>
+
+                                                <nav class="col-lg-4 navbar navbar-expand-lg ">
+
+                                                    <div class="nav-buttons-2-2 position-absolute end-0 pe-2">
+
+                                                        <button class="navbar-toggler" type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#navbarSupportedContent"
+                                                            aria-controls="navbarSupportedContent" aria-expanded="false"
+                                                            aria-label="Toggle navigation">
+                                                            <span class="navbar-toggler-icon"></span>
+                                                        </button>
+
+                                                        <div class="collapse navbar-collapse"
+                                                            id="navbarSupportedContent d-flex">
+                                                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                                                                <li class="nav-item">
+                                                                    <a class="navbar-brand " href="#"><button
+                                                                            class="nav-buttons-2-client"><img
+                                                                                src="{% static 'img/cross.svg' %}"
+                                                                                onclick="window.registration.close()"></button></a>
+                                                                </li>
+                                                            </ul>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </nav>
+
+                                            </nav>
+
+                                        </div>
+
+                                    </div>
+
+                                </section>
+
+                                <section id="modal-second-block">
+
+                                    <div class="container-2">
+
+                                        <div class="content ">
+
+                                            <div class="content-up d-flex justify-content-between">
+
+                                                <div
+                                                    class="content-form d-flex align-items-center flex-direction-column">
+
+                                                    <div class="modal-second-block-form-border ms-3"></div>
+                                                    <div class="modal-second-block-form-card text-white flex-left "
+                                                        style="height: 476px;">
+
+                                                        <form class="row col gy-5 m-0 justify-content-evenly"  method="post">
+
+                                                            <!-- <div class="second-block-form-input-border"></div> -->
+
+                                                            {{ form.as_p }}
+
+                                                            <input name="name" type="name" placeholder="Ваше имя"
+                                                                required class="modal-second-block-form-input "><input
+                                                                name="surname" type="name" placeholder="Ваша фамилия"
+                                                                required class="modal-second-block-form-input "><input
+                                                                name="name_root" type="resname"
+                                                                placeholder="Введите имя пользователя" required
+                                                                class="modal-second-block-form-input ">
+                                                            <input name="email" type="email" placeholder="Ваш e-mail"
+                                                                required class="modal-second-block-form-input col-lg-6">
+                                                            <input name="password" type="password"
+                                                                placeholder="Введите пароль" required
+                                                                class="modal-second-block-form-input col-lg-6">
+                                                            <input name="password" type="password"
+                                                                placeholder="Подтвердите пароль" required
+                                                                class="modal-second-block-form-input col-lg-6">
+
+                                                        </form>
+
+                                                        <div class="form-button d-flex justify-content-center mt-5">
+
+                                                            <button
+                                                                class="button-modal noselect flex-center ms-3 position-absolute"
+                                                                onclick="modalRC()"></button>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </section>
+
+                                <section id="third-block">
+
+                                    <div class="white-2 container-2">
+
+                                        <div class="content pt-3 pb-2 ">
+
+                                            <h5 class="text-center">Уже есть аккаунт?
+
+                                                <button class="nav-buttons-1-main" onclick="modalRA()">
+
+                                                    <h5>Авторизироваться<img src="{% static 'img/sales.svg' %}"></h5>
+
+                                                </button>
+
+                                        </div>
+
+                                    </div>
+
+                                </section>
+
+                            </dialog>
+
+                        </div>
+
+                    </nav>
+
+                    <!--------------------модальное окно "поздравление"----------------------->
+                    <dialog id="congratulations">
+
+                        <section id="modal-first-block">
+
+                            <div class="white container-2">
+
+                                <div class="content pt-4 pb-4">
+
+                                    <nav class="navbar row">
+
+                                        <p class="col-lg-4"></p>
+                                        <h3 class="col-lg-4 text-center">Поздравляем</h3>
+
+                                        <nav class="col-lg-4 navbar navbar-expand-lg ">
+
+                                            <div class="nav-buttons-2-2 position-absolute end-0 pe-2">
+
+                                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#navbarSupportedContent"
+                                                    aria-controls="navbarSupportedContent" aria-expanded="false"
+                                                    aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+
+                                                <div class="collapse navbar-collapse"
+                                                    id="navbarSupportedContent d-flex">
+                                                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                                                        <li class="nav-item">
+                                                            <a class="navbar-brand " href="#"><button
+                                                                    class="nav-buttons-2-client"><img
+                                                                        src="{% static 'img/cross.svg' %}"
+                                                                        onclick="modalCR()"></button></a>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+
+                                            </div>
+
+                                        </nav>
+
+                                    </nav>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                        <section id="modal-second-block">
+
+                            <div class="container-2">
+
+                                <div class="content ">
+
+                                    <div class="content-up d-flex justify-content-between">
+
+                                        <div class="content-form d-flex align-items-center flex-direction-column">
+
+                                            <div class="modal-second-block-form-border ms-3"></div>
+                                            <div class="modal-second-block-form-card text-white flex-left "
+                                                style="height: 320px;  border-bottom-left-radius: 50px;  border-bottom-right-radius: 50px;">
+
+                                                <div class="content-form d-flex justify-content-center">
+
+                                                    <div class="modal-content-form-border mt-5"></div>
+                                                    <div
+                                                        class="modal-content-block-form-card text-white pt-5 ps-4 mt-5 d-flex">
+
+                                                        <p class="">Ваша учетная запись успешно подтверждена!</p>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class=" d-flex justify-content-center mt-5">
+
+                                                    <button class="button-modal-3 noselect flex-center"
+                                                        onclick="window.personalAccount.showModal()"></button>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                    </dialog>
+
+                    <!--------------------модальное окно "личный кабинет"----------------------->
+                    <dialog id="personalAccount">
+
+                        <section id="modal-first-block">
+
+                            <div class="white container-2">
+
+                                <div class="content pt-4 pb-4">
+
+                                    <nav class="navbar row">
+
+                                        <p class="col-lg-4"></p>
+                                        <h3 class="col-lg-4 text-center">Ваш профиль</h3>
+
+                                        <nav class="col-lg-4 navbar navbar-expand-lg ">
+
+                                            <div class="nav-buttons-2-2 position-absolute end-0 pe-2">
+
+                                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#navbarSupportedContent"
+                                                    aria-controls="navbarSupportedContent" aria-expanded="false"
+                                                    aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+
+                                                <div class="collapse navbar-collapse"
+                                                    id="navbarSupportedContent d-flex">
+                                                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                                                        <li class="nav-item">
+                                                            <a class="navbar-brand " href="#"><button
+                                                                    class="nav-buttons-2-client"><img
+                                                                        src="{% static 'img/cross.svg' %}"
+                                                                        onclick="window.personalAccount.close()"></button></a>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+
+                                            </div>
+
+                                        </nav>
+
+                                    </nav>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                        <section id="modal-second-block">
+
+                            <div class="container-2">
+
+                                <div class="content ">
+
+                                    <div class="content-up d-flex justify-content-between">
+
+                                        <div class="content-form d-flex align-items-center flex-direction-column">
+
+                                            <div class="modal-second-block-form-border ms-3"></div>
+                                            <div class="modal-second-block-form-card text-white flex-left "
+                                                style="height: 527px;  border-bottom-left-radius: 50px;  border-bottom-right-radius: 50px;">
+
+                                                <div
+                                                    class="eighth-block-card-content  d-flex align-items-center justify-content-center mt-5 mb-3">
+
+                                                    <h3 class="modal-second-block-card-content-border ms-3"></h3>
+                                                    <h3
+                                                        class="modal-second-block-card-content-round text-white flex-center ms-3">
+                                                        <img src="{% static 'img/emoji(6).svg' %}">
+                                                    </h3>
+
+                                                </div>
+
+                                                <form class="row col gy-5 m justify-content-evenly">
+
+                                                    <!-- <div class="second-block-form-input-border"></div> -->
+
+                                                    <input name="name" type="name" placeholder="Ваше имя" required
+                                                        class="modal-second-block-form-input "><input name="surname"
+                                                        type="name" placeholder="Ваша фамилия" required
+                                                        class="modal-second-block-form-input "><input name="name_root"
+                                                        type="resname" placeholder="Введите имя пользователя" required
+                                                        class="modal-second-block-form-input ">
+                                                    <input name="email" type="email" placeholder="Ваш e-mail" required
+                                                        class="modal-second-block-form-input col-lg-6">
+
+                                                </form>
+
+                                                <div class="form-button d-flex justify-content-center mt-5">
+
+                                                    <button
+                                                        class="button-modal-4 noselect flex-center ms-3 position-absolute"
+                                                        onclick="modalPC()"></button>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                    </dialog>
+
+                    <!--------------------модальное окно "корзина"----------------------->
+                    <dialog id="personalBasket">
+
+                        <section id="modal-first-block">
+
+                            <div class="white container-2">
+
+                                <div class="content pt-4 pb-4">
+
+                                    <nav class="navbar row">
+
+                                        <p class="col-lg-4"></p>
+                                        <h3 class="col-lg-4 text-center">Ваша корзина</h3>
+
+                                        <nav class="col-lg-4 navbar navbar-expand-lg ">
+
+                                            <div class="nav-buttons-2-2 position-absolute end-0 pe-2">
+
+                                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#navbarSupportedContent"
+                                                    aria-controls="navbarSupportedContent" aria-expanded="false"
+                                                    aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+
+                                                <div class="collapse navbar-collapse"
+                                                    id="navbarSupportedContent d-flex">
+                                                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                                                        <li class="nav-item">
+                                                            <a class="navbar-brand " href="#"><button
+                                                                    class="nav-buttons-2-client"><img
+                                                                        src="{% static 'img/cross.svg' %}"
+                                                                        onclick="window.personalBasket.close()"></button></a>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+
+                                            </div>
+
+                                        </nav>
+
+                                    </nav>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                        <section id="modal-second-block">
+
+                            <div class="container-2">
+
+                                <div class="content ">
+
+                                    <div class="content-up d-flex justify-content-between">
+
+                                        <div class="content-form d-flex align-items-center flex-direction-column">
+
+                                            <div class="modal-second-block-form-border ms-3"></div>
+                                            <div class="modal-second-block-form-card text-white flex-left "
+                                                style="height: 365px;  border-bottom-left-radius: 50px;  border-bottom-right-radius: 50px;">
+
+                                                <form class="row col gy-5 m-0 justify-content-evenly">
+
+                                                    <!-- <div class="second-block-form-input-border"></div> -->
+
+                                                    <!-- <input name="name" type="text" placeholder="Название сна" required
+                                                    class="second-block-form-input "> -->
+
+                                                    <input name="good-name" list="good-name"
+                                                        class="modal-second-block-form-input" placeholder="Название сна"
+                                                        required id="good-name-input">
+                                                    <datalist id="good-name">
+                                                        <option value="Тайна вселенной">
+                                                        <option value="На вершине мира">
+                                                        <option value="Лучезарный пляж">
+                                                        <option value="Мир после конца">
+                                                        <option value="Ночь в старом доме">
+                                                        <option value="Монарх империи">
+                                                        <option value="Мир через 100 лет">
+                                                        <option value="Ночные гонщики">
+                                                    </datalist>
+
+                                                    <input name="good-price" id="good-price-input" placeholder="Цена"
+                                                        required class="modal-second-block-form-input">
+
+                                                    <input name="good-final-price" id="good-final-price-input"
+                                                        placeholder="Итого:" required
+                                                        class="modal-second-block-form-input " style="width: 887px;">
+
+                                                    <script src="{% static 'script/form.js' %}"></script>
+
+                                                </form>
+
+                                                <div class="form-button d-flex justify-content-center mt-5">
+
+                                                    <button
+                                                        class="button-modal-5 noselect flex-center ms-3 position-absolute"
+                                                        onclick="window.personalBasket.close()"></button>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                    </dialog>
+
+                </div>
+
+            </nav>
+
+            </div>
+
+            </nav>
+
+        </section>
+
+    </header>
+
+    <!--------------------обложка----------------------->
+    <section id="third-block">
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+
+            </div>
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+
+                    <img src="{% static 'img/cover-1.svg' %}" class="d-block w-100" alt="Тайна вселенной">
+
+                    <div class="carousel-caption d-none d-md-block text-start">
+
+                        <h1>Почувствуйте себя бодрыми</h1>
+                        <h2>после наших снов!</h2>
+                        <p>Окажитесь в необъятном космосе среди тысячи<br>галактик и ярких звезд.
+                            Загляните в самые<br>отдаленные уголки вселенной!</p>
+
+                        <p><img class="me-3" src="{% static 'img/star.svg' %}"><img class="me-3"
+                                src="{% static 'img/star.svg' %}"><img class="me-3"
+                                src="{% static 'img/star.svg' %}"><img class="me-3"
+                                src="{% static 'img/star.svg' %}"><img class="me-3"
+                                src="{% static 'img/grey-star.svg' %}">5 230 отзывов</p>
+
+                        <button class="button noselect flex-center mt-5"
+                            onclick="window.personalBasket.showModal()"></button>
+
+                    </div>
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <img src="{% static 'img/cover-2.svg' %}" class="d-block w-100" alt="На вершине мира">
+
+                    <div class="carousel-caption d-none d-md-block text-start">
+
+                        <h1>Увеличьте</h1>
+                        <h2>свою работоспособность!</h2>
+                        <p>Очутись на самой вершине мира - в горах!<br>Вдохните наичистейший воздух, обойдите<br>вершины
+                            вдоль и поперек!</p>
+
+                        <p><img class="me-3" src="{% static 'img/star.svg' %}"><img class="me-3"
+                                src="{% static 'img/star.svg' %}"><img class="me-3"
+                                src="{% static 'img/star.svg' %}"><img class="me-3"
+                                src="{% static 'img/star.svg' %}"><img class="me-3"
+                                src="{% static 'img/grey-star.svg' %}">3 912 отзывов</p>
+
+                        <button class="button noselect flex-center mt-5"
+                            onclick="window.personalBasket.showModal()"></button>
+
+                    </div>
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <img src="{% static 'img/cover-3.svg' %}" class="d-block w-100" alt="Мир после">
+
+                    <div class="carousel-caption d-none d-md-block text-start">
+
+                        <h1>Почувствуйте себя</h1>
+                        <h2>героем фильма!</h2>
+                        <p>Хотите что-то поострее и опаснее? Станьте<br>героем в мире апокалипсиса и
+                            попробуйте<br>выжить в других условиях жизни!</p>
+
+                        <p><img class="me-3" src="{% static 'img/star.svg' %}"><img class="me-3"
+                                src="{% static 'img/star.svg' %}"><img class="me-3"
+                                src="{% static 'img/star.svg' %}"><img class="me-3"
+                                src="{% static 'img/star.svg' %}"><img class="me-3"
+                                src="{% static 'img/grey-star.svg' %}">4 925 отзывов</p>
+
+                        <button class="button noselect flex-center mt-5"
+                            onclick="window.personalBasket.showModal()"></button>
+
+                    </div>
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <img src="{% static 'img/cover-4.svg' %}" class="d-block w-100" alt="Ночь в доме">
+
+                    <div class="carousel-caption d-none d-md-block text-start">
+
+                        <h1>Пробудите в себе</h1>
+                        <h2>скрытую силу!</h2>
+                        <p>Появилось желание увидеть кошмар? Попробуйте<br>выжить до конца сна в старом доме,
+                            который<br>набит страхами и ужасами!</p>
+
+                        <p><img class="me-3" src="{% static 'img/star.svg' %}"><img class="me-3"
+                                src="{% static 'img/star.svg' %}"><img class="me-3"
+                                src="{% static 'img/star.svg' %}"><img class="me-3"
+                                src="{% static 'img/star.svg' %}"><img class="me-3"
+                                src="{% static 'img/grey-star.svg' %}">3 636 отзывов</p>
+
+                        <button class="button noselect flex-center mt-5"></button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Предыдущий</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Следующий</span>
+            </button>
+
+        </div>
+
+    </section>
+
+    <!--------------------преимущества----------------------->
+    <section id="fourth-block">
+
+        <div class="container">
+
+            <div class="content pt-5 pb-5">
+
+                <img class="" src="{% static 'img/logo(white).svg' %}">
+                <p class="text-white mt-5">Наша компания заботится о своих клиентах<br> и выпускает только
+                    качественные
+                    сны.
+                </p>
+
+                <div class="cards mt-3 row row-cols-lg-2 gy-5 align-items-start row-cols-1 row-cols-md-1">
+
+                    <article>
+
+                        <div class="fourth-block-card-border"></div>
+                        <div class="cards card text-white">
+
+                            <div class="card-content d-flex mt-3">
+
+                                <h3 class="fourth-block-card-content-border  ms-3"></h3>
+                                <h3 class="fourth-block-card-content-round text-white flex-center ms-3"><img
+                                        src="{% static 'img/emoji(1).svg' %}"></h3>
+
+                                <h3 class="text-white mt-3 ms-4">8-ми часовой<br>сон</h3>
+
+                            </div>
+
+                            <div class="card-body ms-5">
+
+                                <p class="card-text">Преобретайте здоровые сны, которые помогут снять усталось и
+                                    напряжение.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article>
+
+                        <div class="fourth-block-card-border"></div>
+                        <div class="cards card text-white">
+
+                            <div class="card-content d-flex mt-3">
+
+                                <h3 class="fourth-block-card-content-border  ms-3"></h3>
+                                <h3 class="fourth-block-card-content-round text-white flex-center ms-3"><img
+                                        src="{% static 'img/emoji(2).svg' %}"></h3>
+
+                                <h3 class="text-white mt-3 ms-4">На любой вкус<br>и цвет</h3>
+
+                            </div>
+
+                            <div class="card-body ms-5">
+
+                                <p class="card-text">Каждый месяц мы<br> выпускаем новые сны, вам точно не надоест!
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article>
+
+                        <div class="fourth-block-card-border"></div>
+                        <div class="cards card text-white">
+
+                            <div class="card-content d-flex mt-3">
+
+                                <h3 class="fourth-block-card-content-border  ms-3"></h3>
+                                <h3 class="fourth-block-card-content-round text-white flex-center ms-3"><img
+                                        src="{% static 'img/emoji(3).svg' %}"></h3>
+
+                                <h3 class="text-white mt-3 ms-4">Качество<br>
+                                    на все 100%</h3>
+
+                            </div>
+
+                            <div class="card-body ms-5">
+
+                                <p class="card-text">Мы используем надежные<br> и последние технологии для
+                                    разработки снов.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="mb-5">
+
+                        <div class="fourth-block-card-border"></div>
+                        <div class="cards card text-white">
+
+                            <div class="card-content d-flex mt-3">
+
+                                <h3 class="fourth-block-card-content-border  ms-3"></h3>
+                                <h3 class="fourth-block-card-content-round text-white flex-center ms-3"><img
+                                        src="{% static 'img/emoji(4).svg' %}"></h3>
+
+                                <h3 class="text-white mt-3 ms-4">Улучшает<br> здоровье</h3>
+
+                            </div>
+
+                            <div class="card-body ms-5">
+
+                                <p class="card-text">Наши сны насыщают мозг кислородом и улучшают работу всех
+                                    органов.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--------------------о компании----------------------->
+    <section id="fifth-block">
+
+        <div class="container">
+
+            <div class="content d-flex justify-content-evenly mt-5  mb-5">
+
+                <img src="{% static 'img/company.svg' %}">
+
+                <div class="fifth-bloc-content-text">
+
+                    <img src="{% static 'img/logo(1).svg' %}">
+
+                    <p class="text-black ">Мы - инновационная компания,<br> занимающаяся созданием и<br> выпуском
+                        уникальных
+                        сновидений<br> для своих клиентов.<br><br>
+                        Компания объединяет в себе<br> передовые технологии в области<br> сновидений и глубокое
+                        понимание<br>
+                        человеческой психологии для<br> создания индивидуально<br> настроенных сновидений, которые<br>
+                        приносят
+                        радость, вдохновение и<br> новые перспективы.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--------------------скидка----------------------->
+    <section id="sixth-block">
+
+        <div class="sixth-block-sales d-flex">
+
+            <marquee>
+
+                <div class="sixth-block-sales d-flex">
+
+                    <h5 class="sixth-block-sales-text-1 text-center text-white pt-2 pb-1 me-5">Закажите наши сны в
+                        течение<cite id="countdown">00:00:00</cite>
+                        часов и получите скидку 10%<img src="{% static 'img/sales.svg' %}"></h5>
+                    <h5 class="sixth-block-sales-text-2 text-center text-white pt-2 pb-1 me-5">Закажите наши сны в
+                        течение<cite id="countdown">00:00:00</cite>
+                        часов и получите скидку 10%<img src="{% static 'img/sales.svg' %}"></h5>
+                    </h5>
+
+                </div>
+
+            </marquee>
+
+        </div>
+
+        </div>
+
+    </section>
+
+    <!--------------------информация о компании----------------------->
+    <section id="seventh-block">
+
+        <div class="container">
+
+            <div class="content mt-5 mb-5 d-flex justify-content-center">
+
+                <article>
+
+                    <div class="seventh-block-button">
+
+                        <div class="seventh-block-button-border"></div>
+                        <div class="card seventh-block-button-round">
+
+                            <div class="seventh-block-button-round-card-content">
+
+                                <h1 class="text-white">103</h1>
+                                <h4 class="text-white">Сотрудника</h4>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <article>
+
+                    <div class="seventh-block-button">
+
+                        <div class="seventh-block-button-border-big">
+                            <div class="card seventh-block-button-round-big">
+
+                                <div class="seventh-block-button-round-big-card-content">
+
+                                    <h1 class="text-white">1000</h1>
+                                    <h4 class="text-white">Заказов в месяц</h4>
+                                    <p class="text-white text-center">На рынке<br>
+                                        с 2098 года</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                </article>
+
+                <article>
+
+                    <div class="seventh-block-button">
+
+                        <div class="seventh-block-button-border"></div>
+                        <div class="card seventh-block-button-round">
+
+                            <div class="seventh-block-button-round-card-content">
+
+                                <h1 class="text-white">8</h1>
+                                <h4 class="text-white">Наград</h4>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--------------------отзывы----------------------->
+    <section id="eighth-block">
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+
+            </div>
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+
+                    <img src="{% static 'img/reviews.svg' %}" class="d-block w-100">
+
+                    <div class="carousel-caption d-none d-md-block text-start">
+
+                        <h2><b>Что говорят </b>наши клиенты?</h2></span>
+                        <p class="mt-4">Я всегда мечтал об идеальном мире, где я мог бы пережить самые невероятные
+                            приключения и
+                            испытать самые захватывающие эмоции. И когда я узнал о компании YourDreams, я понял, что моя
+                            мечта стала реальностью.</p>
+
+                        <div class="eighth-block-card-content  d-flex align-items-center">
+
+                            <h3 class="eighth-block-card-content-border ms-3"></h3>
+                            <h3 class="eighth-block-card-content-round text-white flex-center ms-3"><img
+                                    src="{% static 'img/emoji(5).svg' %}">
+                            </h3>
+
+                            <p class="text-white mt-3 ms-4">Антон Ленский</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <img src="{% static 'img/reviews.svg' %}" class="d-block w-100">
+
+                    <div class="carousel-caption d-none d-md-block text-start">
+
+                        <h2><b>Что говорят </b>наши клиенты?</h2></span>
+                        <p class="mt-4">Сон, который я преобрела, был словно путешествие в другой мир, полный
+                            удивительных моментов и эмоций. Я чувствовала себя как главный герой собственной истории,
+                            где каждая деталь была продумана до мельчайших нюансов.</p>
+
+                        <div class="eighth-block-card-content  d-flex align-items-center">
+
+                            <h3 class="eighth-block-card-content-border ms-3"></h3>
+                            <h3 class="eighth-block-card-content-round text-white flex-center ms-3"><img
+                                    src="{% static 'img/emoji(6).svg' %}">
+                            </h3>
+
+                            <p class="text-white mt-3 ms-4">Анастасия Березина</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <img src="{% static 'img/reviews.svg' %}" class="d-block w-100">
+
+                    <div class="carousel-caption d-none d-md-block text-start">
+
+                        <h2><b>Что говорят </b>наши клиенты?</h2></span>
+                        <p class="mt-4">Мой опыт с сном, созданным компанией YourDreams, был абсолютно невероятным. Я
+                            всегда мечтала о приключениях, оказывающихся за пределами моего воображения, и именно это
+                            мне и удалось пережить благодаря их снам.
+                        </p>
+
+                        <div class="eighth-block-card-content  d-flex align-items-center">
+
+                            <h3 class="eighth-block-card-content-border ms-3"></h3>
+                            <h3 class="eighth-block-card-content-round text-white flex-center ms-3"><img
+                                    src="{% static 'img/emoji(7).svg' %}">
+                            </h3>
+
+                            <p class="text-white mt-3 ms-4">София Кайлова</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <img src="{% static 'img/reviews.svg' %}" class="d-block w-100">
+
+                    <div class="carousel-caption d-none d-md-block text-start">
+
+                        <h2><b>Что говорят </b>наши клиенты?</h2></span>
+                        <p class="mt-4">Я горячо рекомендую услуги YourDreams всем, кто мечтает о незабываемых
+                            приключениях и хочет пережить что-то по-настоящему особенное. Этот сон останется с вами
+                            навсегда, наполняя вашу жизнь вдохновением и волшебством.
+                        </p>
+
+                        <div class="eighth-block-card-content  d-flex align-items-center">
+
+                            <h3 class="eighth-block-card-content-border ms-3"></h3>
+                            <h3 class="eighth-block-card-content-round text-white flex-center ms-3"><img
+                                    src="{% static 'img/emoji(8).svg' %}">
+                            </h3>
+
+                            <p class="text-white mt-3 ms-4">Сергей Илов</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Предыдущий</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Следующий</span>
+            </button>
+
+        </div>
+
+    </section>
+
+    <!--------------------футер----------------------->
+    <footer>
+
+        <section id="ninth-block">
+
+            <div class="container">
+
+                <div class="content mt-5 pt-5 ">
+
+                    <div class="content-up d-flex justify-content-between">
+
+                        <div class="content-form d-flex align-items-center flex-direction-column">
+
+                            <div class="ninth-block-form-border ms-3"></div>
+                            <div class="ninth-block-form-card  text-white flex-left pt-5 ps-5">
+
+                                <h3 class="pb-2">Присоединяйся к нам!</h3>
+
+                                <p>Узнавай о новых снах самым первым&#41;</p>
+
+                                <div class="ninth-block-content-form-into">
+
+                                    <form>
+
+                                        <div class="ninth-block-form-input-border"></div>
+
+                                        <input name="email" type="email" placeholder="E-mail" required
+                                            class="ninth-block-form-input"><button
+                                            class="button-little noselect flex-center ms-3"></button>
+
+                                    </form>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="content-text text-center">
+
+                            <img src="{% static 'img/logo(white).svg' %}">
+
+                            <h5 class="text-white">yourdreams.com©2024</h5>
+
+                        </div>
+
+                    </div>
+
+                    <div class="content-down mt-5 d-flex justify-content-between pb-3">
+
+                        <div class="content-messengers ">
+
+                            <a href="https://t.me/malepeg"><img src="{% static 'img/telegram.svg' %}"
+                                    class="messengers"></a>
+                            <a href="https://t.me/malepeg"><img src="{% static 'img/vkontakte.svg' %}"
+                                    class="messengers"></a>
+                            <a href="https://t.me/malepeg"><img src="{% static 'img/youtube.svg' %}"
+                                    class="messengers"></a>
+
+                        </div>
+
+                        <div class="content-buttons">
+
+                            <a class="nav-buttons-1-main navbar-brand fs-3" href="#"><button
+                                    class="footer-buttons-1-main">Главная</button></a>
+
+                            <a class=" navbar-brand fs-3" href="{% url 'products:index' %}" id="products.html"><button
+                                    class="footer-buttons-1-catalog">Каталог</button></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+/* ------------------контейнер------------------ */
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ------------------верхушка------------------ */
+
+.first-block-sales {
+    background-color: #060845;
+}
+
+
+/* ------------------шапка------------------ */
+
+/* кнопки слева */
+.nav-buttons-1-main,
+.nav-buttons-1-catalog {
+    transition: 0.5s;
+    border: none;
+    background-color: white;
+}
+
+.nav-buttons-1-main:hover,
+.nav-buttons-1-catalog:hover {
+    -moz-text-shadow: 0 0 10px #001aff;
+    -webkit-text-shadow: 0 0 10px #001AFF;
+    text-shadow: 0 0 10px #001AFF;
+    transform: translateY(3px);
+}
+
+
+/* кнопки справа */
+.nav-buttons-2-client,
+.nav-buttons-2-basket {
+    width: 84px;
+    height: 84px;
+    background: rgb(3, 4, 37);
+    background: linear-gradient(148deg, rgba(3, 4, 37, 1) 2%, rgba(14, 19, 163, 1) 100%);
+    border-radius: 50%;
+    box-shadow: 0 5px 15px 0 #001AFF;
+    transition: 0.5s;
+    border: none;
+}
+
+
+.nav-buttons-2-client:hover,
+.nav-buttons-2-basket:hover {
+    box-shadow: 8px 4px 25px 1px #001AFF;
+    transform: translateY(3px);
+}
+
+.nav-buttons-2 {
+    width: 280px;
+}
+
+
+/* ------------------кнопка большая------------------ */
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    width: 308px;
+    height: 85px;
+    text-decoration: none;
+    border-radius: 100px;
+    border: none;
+    box-shadow: 16px 8px 25px 1px #001AFF;
+    transition: 500ms;
+    background-image: linear-gradient(90deg, rgba(3, 4, 37, 1) 0%, rgba(20, 22, 96, 1) 43%, rgba(19, 25, 215, 1) 100%);
+    transition: 500ms;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.button::after {
+    width: 295px;
+    height: 77px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: 'Заказать';
+    font-size: 20px;
+    color: #eee;
+    border-radius: 100px;
+    background-color: rgb(3, 4, 37);
+    transition: 500ms;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.button:hover::after {
+    font-size: 30px;
+    background-color: transparent;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:active {
+    transform: translateY(10px);
+}
+
+
+/* ------------------кнопка маленькая------------------ */
+
+.button-little {
+    width: 228px;
+    height: 63px;
+    text-decoration: none;
+    border-radius: 100px;
+    border: none;
+    box-shadow: 16px 8px 25px 1px #001AFF;
+    transition: 500ms;
+    background-image: linear-gradient(90deg, rgba(3, 4, 37, 1) 0%, rgba(20, 22, 96, 1) 43%, rgba(19, 25, 215, 1) 100%);
+    transition: 500ms;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.button-little::after {
+    width: 218px;
+    height: 58px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: 'Подписаться';
+    font-size: 20px;
+    color: #eee;
+    border-radius: 100px;
+    background-color: rgb(3, 4, 37);
+    transition: 500ms;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+.button-little:hover::after {
+    font-size: 20px;
+    background-color: transparent;
+}
+
+.button-little:focus {
+    outline: none;
+}
+
+.button-little:active {
+    transform: translateY(10px);
+}
+
+
+/* ------------------футер------------------ */
+
+#ninth-block {
+    background-color: #060845;
+}
+
+/* форма (карточка) */
+.ninth-block-form-card {
+    width: 685px;
+    height: 268px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 16px 8px 25px 1px #001AFF;
+    background-image: linear-gradient(90deg, rgba(3, 4, 37, 1) 0%, rgba(20, 22, 96, 1) 43%, rgba(19, 25, 215, 1) 100%);
+    z-index: 1;
+}
+
+/* форма-подсветка  формы (карточки) */
+.ninth-block-form-border {
+    width: 674px;
+    height: 273px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(20, 22, 96, 1) 35%, rgba(50, 58, 255, 1) 100%);
+    border: none;
+}
+
+form {
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+/* инпут */
+.ninth-block-form-input {
+    width: 342px;
+    height: 60px;
+    border-radius: 100px;
+    border: none;
+    box-shadow: 16px 8px 25px 1px #001AFF;
+    background-image: linear-gradient(90deg, rgba(3, 4, 37, 1) 0%, rgba(20, 22, 96, 1) 43%, rgba(19, 25, 215, 1) 100%);
+    z-index: 1;
+    color: white;
+    padding-left: 30px;
+    font-family: "Montserrat", sans-serif;
+    outline: none;
+}
+
+/* инпут (подсветка) */
+.ninth-block-form-input-border {
+    width: 345px;
+    height: 63px;
+    position: absolute;
+    padding: 0px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    border-radius: 100px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(20, 22, 96, 1) 35%, rgba(50, 58, 255, 1) 100%);
+    border: none;
+}
+
+/* кнопки навигационные */
+.footer-buttons-1-main,
+.footer-buttons-1-catalog {
+    transition: 0.5s;
+    border: none;
+    background-color: #060845;
+    color: white;
+}
+
+.footer-buttons-1-main:hover,
+.footer-buttons-1-catalog:hover {
+    -moz-text-shadow: 0 0 10px #001aff;
+    -webkit-text-shadow: 0 0 10px #001AFF;
+    text-shadow: 0 0 10px #001AFF;
+    transform: translateY(3px);
+}
+
+/* кноки соц сетей */
+.messengers {
+    width: 50px;
+    height: 50px;
+    background: rgb(3, 4, 37);
+    background: linear-gradient(148deg, rgba(3, 4, 37, 1) 2%, rgba(14, 19, 163, 1) 100%);
+    border-radius: 50%;
+    box-shadow: 0 5px 15px 0 #001AFF;
+    transition: 0.5s;
+    border: none;
+}
+
+.messengers:hover {
+    box-shadow: 8px 4px 25px 1px #001AFF;
+    transform: translateY(3px);
+}
+
+/* ------------------дополнительно на странице------------------ */
+
+::selection {
+    color: #5258ff;
+}
+
+::-webkit-scrollbar {
+    background-color: #060845;
+    width: 2px;
+    height: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    width: 2px;
+    height: 2px;
+}
+
+
